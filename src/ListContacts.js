@@ -3,9 +3,42 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class ListContacts extends Component {
+
+  static propTypes =
+  {
+    contacts: PropTypes.array.isRequired,
+    onDeleteContact: PropTypes.func.isRequired
+  }
+
+  state={
+    query:''
+  }
+
+  updateQuery=(query)=>{
+    this.setState(() =>({
+      query: query.trim()
+    }))
+  
+  }
+
+
   render() {
     console.log('Props', this.props)
+    
     return (
+      <div className='list-contacts'>
+      {JSON.stringify(this.state)}
+      <div className='list-contacts-top'>
+      <input
+      className='search-contacts'
+      type='text'
+      placeholder='Search Contacts'
+      value={this.state.query}
+      onChange={(event)=>
+        this.updateQuery(event.target.value)}/>
+      </div>
+
+
       <ol className='contact-list'>
 
      { this.props.contacts.map( (contact) =>(
@@ -28,14 +61,11 @@ class ListContacts extends Component {
                  }
 
       </ol>
+      </div>
     )
   }
 }
-  ListContacts.propTypes =
-  {
-    contacts: PropTypes.array.isRequired,
-    onDeleteContact: PropTypes.func.isRequired
-  }
+  
 
 
 export default ListContacts 
