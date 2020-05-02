@@ -47,8 +47,8 @@ class ListContacts extends Component {
         this.updateQuery(event.target.value)}/>
 
         <Link to='/create'
-        
-        className="add-contact">Add Contact</Link>
+        className="add-contact">Add Contact
+        </Link>
       </div>
 
       {showingContacts.length !== contacts.length && (
