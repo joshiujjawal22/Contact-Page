@@ -1,6 +1,6 @@
 # Contacts
 
-Save the contacts using API
+Save the contacts using React.js
 
 ## Requirement:
 ``Installed node and yarn in your system``
