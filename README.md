@@ -1,19 +1,20 @@
-# Contacts Project
+# Contacts
 
-This repo is a code-along with the first project in the [React Nanodegree program](https://www.udacity.com/course/react-nanodegree--nd019).
+Save the contacts using API
 
 ## Requirement:
 ``Installed node and yarn in your system``
 
-## To run the app run:
+## To run the app run:(Client Side)
 ``npm install`` then ``yarn start``
 
-## Contributing
+## To run the app run:(Server Side)
 
-Because this is a code-along project and the commits correspond to specific videos in the program, we will not be accepting pull requests.
+### First:
+``cd server`` 
 
-If you feel like there's a major problem, please open an issue to discuss the problem and potential resolution.
 
-## Contributing
+### Second:
+``npm install`` then ``node server.js``
 
-MIT
+
